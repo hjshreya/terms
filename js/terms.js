@@ -1,6 +1,6 @@
 const getRelatedTerms = async function(term){
 	
-	if( !term ) return null;
+	if(!terms) return;
 		
 	const conf = {method: "GET"};
 	
@@ -16,7 +16,7 @@ const getRelatedTerms = async function(term){
 	
 	data = await request.json();
 	
-	sections = data.parse.sections;
+	let sections = data.parse.sections;
 
 	let index = -1;
 	
@@ -38,7 +38,7 @@ const getRelatedTerms = async function(term){
 	
 	data = await request.json();
 	
-	terms = data.parse.links.map( i => i["*"].replace(/.*\:/, "") );
+	let terms = data.parse.links.map( i => i["*"].replace(/.*\:/, "") );
 
 	return terms;
 }
