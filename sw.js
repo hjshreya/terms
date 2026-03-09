@@ -5,7 +5,8 @@ const filesToCache = [
       './js/terms.js',
       './css/main.css',
       './favicon.png',
-      './manifest.json'
+      './manifest.json',
+		'./js/aux.js'
  ];
 
 const staticCacheName = 'terms-v1';
