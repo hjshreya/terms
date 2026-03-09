@@ -1,6 +1,9 @@
 const getRelatedTerms = async function(term){
 	
-	if(!terms) return;
+	if (terms)
+  		document.querySelector('#result').innerHTML = terms.join(', ');
+	else
+  		document.querySelector('#result').innerHTML = "No related terms found.";
 		
 	const conf = {method: "GET"};
 	
